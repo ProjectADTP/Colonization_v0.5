@@ -1,0 +1,219 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Andrey\\Forest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\resourcespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\resourcespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|c:\\users\\andrey\\forest\\assets\\source\\scripts\\resourcetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\resourcetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\spawnzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\spawnzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\resource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\strategycameralite\\scripts\\strategycamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\strategycameralite\\scripts\\strategycamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\basestatsui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\basestatsui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\mover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\mover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\collisiondetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\collisiondetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\unitanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\unitanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|C:\\Users\\Andrey\\Forest\\assets\\source\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6D5CFDB-254D-3C6E-3D7A-3DE7B9BBCA0E}|Assembly-CSharp.csproj|solutionrelative:assets\\source\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResourceType.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\ResourceType.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\ResourceType.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\ResourceType.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\ResourceType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T09:34:03.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpawnZone.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\SpawnZone.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\SpawnZone.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\SpawnZone.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\SpawnZone.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T09:07:19.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ResourceSpawner.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\ResourceSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\ResourceSpawner.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\ResourceSpawner.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\ResourceSpawner.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAIwIIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T10:00:10.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BaseStatsUI.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\BaseStatsUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\BaseStatsUI.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\BaseStatsUI.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\BaseStatsUI.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T19:06:10.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CollisionDetector.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\CollisionDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\CollisionDetector.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\CollisionDetector.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\CollisionDetector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T14:15:02.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Mover.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Mover.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\Mover.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Mover.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\Mover.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwB4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T13:55:16.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Base.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Base.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\Base.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Base.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\Base.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAIwDYAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T09:32:12.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\GameManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T09:31:50.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Resource.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Resource.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\Resource.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Resource.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\Resource.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T09:29:41.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Unit.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\Unit.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\Unit.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\Unit.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T08:57:14.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UnitAnimator.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\UnitAnimator.cs",
+              "RelativeDocumentMoniker": "Assets\\Source\\scripts\\UnitAnimator.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\Source\\scripts\\UnitAnimator.cs",
+              "RelativeToolTip": "Assets\\Source\\scripts\\UnitAnimator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T08:50:39.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StrategyCamera.cs",
+              "DocumentMoniker": "C:\\Users\\Andrey\\Forest\\Assets\\StrategyCameraLite\\Scripts\\StrategyCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\StrategyCameraLite\\Scripts\\StrategyCamera.cs",
+              "ToolTip": "C:\\Users\\Andrey\\Forest\\Assets\\StrategyCameraLite\\Scripts\\StrategyCamera.cs",
+              "RelativeToolTip": "Assets\\StrategyCameraLite\\Scripts\\StrategyCamera.cs",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAcwBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T15:54:59.044Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
