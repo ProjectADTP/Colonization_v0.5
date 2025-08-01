@@ -11,11 +11,11 @@ public class ResourceSpawner : MonoBehaviour
 
     [Header("Дополнительные настройки")]
     [SerializeField] private LayerMask _groundLayer;
-    [SerializeField] private float _spawnHeightOffset = 0.5f;
-    [SerializeField] private float _minSpawnDistance = 2f;
+    [SerializeField] private float _spawnHeightOffset = 0f;
+    [SerializeField] private float _minSpawnDistance = 3f;
 
     [Header("Типы ресурсов")]
-    [SerializeField] private List<ResourceType> _resourceTypes = new List<ResourceType>();
+    [SerializeField] private List<Resource> _resources = new List<Resource>();
 
     private Collider[] _colliderBuffer = new Collider[10];
     private int _minResources = 5;
@@ -37,32 +37,14 @@ public class ResourceSpawner : MonoBehaviour
 
     private void SpawnResource()
     {
-        if (_resourceTypes.Count == 0)
+        if (_resources.Count == 0)
         {
             return;
         }
 
-        int totalWeight = 0;
+        int randomIndex = Random.Range(0, _resources.Count);
 
-        foreach (var type in _resourceTypes)
-        {
-            totalWeight += type.SpawnWeight;
-        }
-
-        int randomWeight = Random.Range(0, totalWeight);
-
-        Resource prefabToSpawn = null;
-
-        foreach (var type in _resourceTypes)
-        {
-            if (randomWeight < type.SpawnWeight)
-            {
-                prefabToSpawn = type.GetPrefab();
-                break;
-            }
-
-            randomWeight -= type.SpawnWeight;
-        }
+        Resource prefabToSpawn = _resources[randomIndex];
 
         if (_spawnZone == null || prefabToSpawn == null)
         {
@@ -70,11 +52,11 @@ public class ResourceSpawner : MonoBehaviour
         }
 
         int attempts = 10;
-        bool spawned = false;
-        Vector3 spawnPos = Vector3.zero;
+
+        Vector3 spawnPos;
         Quaternion spawnRot = Quaternion.identity;
 
-        while (attempts-- > 0 && !spawned)
+        while (attempts-- > 0)
         {
             spawnPos = _spawnZone.GetRandomPosition();
 
@@ -86,16 +68,11 @@ public class ResourceSpawner : MonoBehaviour
 
             if (IsPositionValid(spawnPos, _minSpawnDistance))
             {
-                spawned = true;
+                Instantiate(prefabToSpawn, spawnPos, spawnRot, transform);
+
+                return;
             }
         }
-
-        if (spawned == false)
-        {
-            return;
-        }
-
-        Instantiate(prefabToSpawn, spawnPos, spawnRot, transform);
     }
 
     private bool IsPositionValid(Vector3 position, float minDistance)

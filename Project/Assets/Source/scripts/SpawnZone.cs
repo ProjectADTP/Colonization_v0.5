@@ -23,7 +23,6 @@ public class SpawnZone : MonoBehaviour
         return GetRandomPoint(randomCollider);
     }
 
-
     private Vector3 GetRandomPoint(BoxCollider box)
     {
         Vector3 center = box.transform.TransformPoint(box.center);

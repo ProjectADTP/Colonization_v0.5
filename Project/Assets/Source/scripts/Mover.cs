@@ -16,6 +16,16 @@ public class Mover : MonoBehaviour
         _movementCoroutine = StartCoroutine(Move(target));
     }
 
+    public void StopActiveCoroutine()
+    {
+        if (_movementCoroutine != null)
+        {
+            StopCoroutine(_movementCoroutine);
+
+            _movementCoroutine = null;
+        }
+    }
+
     private IEnumerator Move(Vector3 target)
     {
         while (Vector3.Distance(transform.position, target) > _stoppingDistance)
@@ -25,16 +35,6 @@ public class Mover : MonoBehaviour
             transform.LookAt(new Vector3(target.x, transform.position.y, target.z));
 
             yield return null;
-        }
-    }
-
-    public void StopActiveCoroutine()
-    {
-        if (_movementCoroutine != null)
-        {
-            StopCoroutine(_movementCoroutine);
-
-            _movementCoroutine = null;
         }
     }
 }

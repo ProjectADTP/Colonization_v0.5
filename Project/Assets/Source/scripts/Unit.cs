@@ -7,7 +7,6 @@ using System;
 
 public class Unit : MonoBehaviour
 {
-    [SerializeField] private Base _base;
     [SerializeField] private GameObject _pocket;
 
     private UnitAnimator _animator;
@@ -16,10 +15,13 @@ public class Unit : MonoBehaviour
 
     private UnitState _currentState = UnitState.Idle;
     private Resource _targetResource;
+    private Vector3 _dropOffPoint;
+
+    private bool haveResource;
 
     public event Action<Resource,Unit> Finished;
 
-    private enum UnitState { Idle, MovingToResource, MovingToBase }
+    private enum UnitState { Idle, MovingToPoint }
 
     public bool IsIdle => _currentState == UnitState.Idle;
 
@@ -28,6 +30,31 @@ public class Unit : MonoBehaviour
         _animator = GetComponent<UnitAnimator>();
         _collisionDetector = GetComponent<CollisionDetector>();
         _mover = GetComponent<Mover>();
+    }
+
+    public void AssignTask(Resource resource, Vector3 dropOffPoint)
+    {
+        _targetResource = resource;
+        _dropOffPoint = dropOffPoint;
+
+        SwitchState(UnitState.MovingToPoint);
+
+        _collisionDetector.FindedResorces += CollectResource;
+
+        _mover.MoveToTarget(_targetResource.transform.position);
+    }
+
+    private void DeliverResource()
+    {
+        _collisionDetector.ArrivedToBase -= DeliverResource;
+
+        _mover.StopActiveCoroutine();
+
+        haveResource = false;
+
+        SwitchState(UnitState.Idle);
+
+        Finished?.Invoke(_targetResource, this);
     }
 
     private void CollectResource(Resource resource)
@@ -43,33 +70,13 @@ public class Unit : MonoBehaviour
 
         TakeResource(_targetResource);
 
-        SwitchState(UnitState.MovingToBase);
+        haveResource = true;
+
+        SwitchState(UnitState.MovingToPoint);
 
         _collisionDetector.ArrivedToBase += DeliverResource;
 
-        _mover.MoveToTarget(_base.transform.position);
-    }
-
-    public void DeliverResource()
-    {
-        _collisionDetector.ArrivedToBase -= DeliverResource;
-
-        _mover.StopActiveCoroutine();
-
-        SwitchState(UnitState.Idle);
-
-        Finished?.Invoke(_targetResource, this);
-    }
-
-    public void AssignTask(Resource resource)
-    {
-        _targetResource = resource;
-
-        SwitchState(UnitState.MovingToResource);
-
-        _collisionDetector.FindedResorces += CollectResource;
-
-        _mover.MoveToTarget(_targetResource.transform.position);
+        _mover.MoveToTarget(_dropOffPoint);
     }
 
     private void TakeResource(Resource resource)
@@ -89,11 +96,11 @@ public class Unit : MonoBehaviour
             case UnitState.Idle:
                 _animator.SetIdle();
                 break;
-            case UnitState.MovingToResource:
-                _animator.SetWalk();
-                break;
-            case UnitState.MovingToBase:
-                _animator.SetWalkBack();
+            case UnitState.MovingToPoint:
+                if (haveResource) 
+                    _animator.SetWalkBack();
+                else
+                    _animator.SetWalk();
                 break;
             default:
                 break;

@@ -1,63 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(Scaner))]
 public class Base : MonoBehaviour
 {
-    [Header("Настройки")]
-    [SerializeField] private float _scanRadius = 50f;
-
     [Header("Статистика")]
     [SerializeField] private List<Unit> _units = new List<Unit>();
 
     private List<Resource> _availableResources = new List<Resource>();
+    private List<Resource> _occupiedResources = new List<Resource>();
     private List<Resource> _resources = new List<Resource>();
+    
+    private Scaner _scaner;
 
     public event Action ResourceChanged;
-
-    public event Action OnBaseClicked;
 
     public int Resources => _resources.Count;
     public int Units => _units.Count;
 
-    public void ScanForResources()
+    private void Awake()
     {
-        _availableResources.Clear();
+        _scaner = GetComponent<Scaner>();
+    }
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, _scanRadius);
+    public void StartScan()
+    {
+        _scaner.ScanForResources(ref _availableResources);
 
-        foreach (Collider hit in hits)
-        {
-            if (hit.TryGetComponent(out Resource resource))
-            {
-                _availableResources.Add(resource);
-            }
-        }
-
-        if (_availableResources.Count > 0) 
+        if (_availableResources.Count > 0)
         {
             AssignTasks();
         }
-    }
-
-    private void OnMouseDown()
-    {
-        OnBaseClicked?.Invoke();
     }
 
     private void AssignTasks()
     {
         foreach (Resource resource in _availableResources)
         {
-            if (resource == null)
-            {
-                _availableResources.Remove(resource);
-
-                continue;
-            }
-
-            if (resource.IsAvailable == false)
+            if (_occupiedResources.Contains(resource))
             {
                 continue;
             }
@@ -66,12 +47,11 @@ public class Base : MonoBehaviour
             {
                 if (unit.IsIdle)
                 {
-                    resource.Reserve();
-
+                    _occupiedResources.Add(resource);
                     _availableResources.Remove(resource);
 
                     unit.Finished += AddResource;
-                    unit.AssignTask(resource);
+                    unit.AssignTask(resource, transform.position);
 
                     return;
                 }
