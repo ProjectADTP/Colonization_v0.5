@@ -13,6 +13,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Human_GoldOre Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3649374795771973684, guid: 5dc51b215a5b479459fe0fd8d0754109,
+        type: 3}
+      propertyPath: m_Layer
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 4174554994003987086, guid: 5dc51b215a5b479459fe0fd8d0754109,
         type: 3}
       propertyPath: m_LocalPosition.x

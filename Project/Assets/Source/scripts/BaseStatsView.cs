@@ -10,6 +10,7 @@ public class BaseStatsView : MonoBehaviour
     [SerializeField] private InputReader _inputReader;
 
     private Base _base;
+    private Storage _storage;
 
     private void Awake()
     {
@@ -40,25 +41,26 @@ public class BaseStatsView : MonoBehaviour
 
     private void UpdateInfo()
     {
-        _resourceCountText.text = _base.Resources.ToString();
+        _resourceCountText.text = _storage.Resources.ToString();
         _unitsCountText.text = _base.Units.ToString();
     }
 
     private void Hide()
     {
-        if (_base != null) 
+        if (_storage != null) 
         {
-            _base.ResourceChanged -= UpdateInfo;
+            _storage.ResourceChanged -= UpdateInfo;
         }
         
         gameObject.SetActive(false);
 
+        _storage = null;
         _base = null;
     }
 
     private void Show(Base chosenBase)
     {
-        if (chosenBase == null && gameObject.activeSelf == true) 
+        if (chosenBase == null) 
         {
             Hide();
 
@@ -67,11 +69,16 @@ public class BaseStatsView : MonoBehaviour
 
         _base = chosenBase;
 
+        if (_base.TryGetComponent(out Storage storage))
+        {
+            _storage = storage;
+        }
+
         if (gameObject.activeSelf == false && _base != null)
         {
             gameObject.SetActive(true);
 
-            _base.ResourceChanged += UpdateInfo;
+            _storage.ResourceChanged += UpdateInfo;
 
             UpdateInfo();
         }

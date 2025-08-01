@@ -6,17 +6,26 @@ public class Scaner : MonoBehaviour
     [Header("Настройки")]
     [SerializeField] private float _scanRadius = 50f;
 
-    public void ScanForResources(ref List<Resource> resources)
+    [SerializeField] private LayerMask _resourceLayer;
+
+    private Collider[] _hits = new Collider[20];
+
+    public void ScanForResources(Storage storage)
     {
-        resources.Clear();
+        storage.ClearAvailableResources();
 
-        Collider[] hits = Physics.OverlapSphere(transform.position, _scanRadius);
+        Physics.OverlapSphereNonAlloc(transform.position, _scanRadius, _hits, _resourceLayer);
 
-        foreach (Collider hit in hits)
+        foreach (Collider hit in _hits)
         {
+            if (hit == null)
+            {
+                continue;
+            }
+
             if (hit.TryGetComponent(out Resource resource))
             {
-                resources.Add(resource);
+                storage.RegisterResource(resource);
             }
         }
     }

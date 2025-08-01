@@ -12,18 +12,12 @@ public class Unit : MonoBehaviour
     private UnitAnimator _animator;
     private CollisionDetector _collisionDetector;
     private Mover _mover;
-
-    private UnitState _currentState = UnitState.Idle;
     private Resource _targetResource;
+
     private Vector3 _dropOffPoint;
 
-    private bool haveResource;
-
-    public event Action<Resource,Unit> Finished;
-
-    private enum UnitState { Idle, MovingToPoint }
-
-    public bool IsIdle => _currentState == UnitState.Idle;
+    public bool IsIdle { get; private set; } = true;
+    public bool HaveResource { get; private set; }
 
     private void Awake()
     {
@@ -32,29 +26,29 @@ public class Unit : MonoBehaviour
         _mover = GetComponent<Mover>();
     }
 
+    public Resource GetResource() => _targetResource;
+
+    public void Release()
+    {
+        IsIdle = true;
+        HaveResource = false;
+        _targetResource = null;
+
+        _mover.StopActiveCoroutine();
+        _animator.SetIdle();
+    }
+
     public void AssignTask(Resource resource, Vector3 dropOffPoint)
     {
-        _targetResource = resource;
         _dropOffPoint = dropOffPoint;
-
-        SwitchState(UnitState.MovingToPoint);
+        _targetResource = resource;
+        IsIdle = false;
+        HaveResource = false;
 
         _collisionDetector.FindedResorces += CollectResource;
 
         _mover.MoveToTarget(_targetResource.transform.position);
-    }
-
-    private void DeliverResource()
-    {
-        _collisionDetector.ArrivedToBase -= DeliverResource;
-
-        _mover.StopActiveCoroutine();
-
-        haveResource = false;
-
-        SwitchState(UnitState.Idle);
-
-        Finished?.Invoke(_targetResource, this);
+        _animator.SetWalk();
     }
 
     private void CollectResource(Resource resource)
@@ -66,44 +60,19 @@ public class Unit : MonoBehaviour
 
         _collisionDetector.FindedResorces -= CollectResource;
 
-        _mover.StopActiveCoroutine();
-
         TakeResource(_targetResource);
 
-        haveResource = true;
-
-        SwitchState(UnitState.MovingToPoint);
-
-        _collisionDetector.ArrivedToBase += DeliverResource;
-
         _mover.MoveToTarget(_dropOffPoint);
+        _animator.SetWalkBack();
     }
 
     private void TakeResource(Resource resource)
     {
+        HaveResource = true;
+
         resource.transform.SetParent(_pocket.transform);
         resource.transform.localPosition = Vector3.zero;
-        resource.transform.localRotation = Quaternion.Euler(0f,90f,0f);
+        resource.transform.localRotation = Quaternion.Euler(0f, 90f, 0f);
         resource.transform.localScale = Vector3.one * 0.5f;
-    }
-
-    private void SwitchState(UnitState state)
-    {
-        _currentState = state;
-
-        switch (state) 
-        {
-            case UnitState.Idle:
-                _animator.SetIdle();
-                break;
-            case UnitState.MovingToPoint:
-                if (haveResource) 
-                    _animator.SetWalkBack();
-                else
-                    _animator.SetWalk();
-                break;
-            default:
-                break;
-        } 
     }
 }

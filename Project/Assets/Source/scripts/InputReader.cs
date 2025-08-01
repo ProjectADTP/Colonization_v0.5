@@ -12,7 +12,7 @@ public class InputReader : MonoBehaviour
     {
         bool clickedOnUI = EventSystem.current.IsPointerOverGameObject();
 
-        if (Input.GetMouseButtonDown(0) && !clickedOnUI)
+        if (Input.GetMouseButtonDown(0) && clickedOnUI == false)
         {
             Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);
 
